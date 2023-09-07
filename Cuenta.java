@@ -15,16 +15,22 @@ public class Cuenta {
     public void consignar(float cantidad){
         saldo = saldo + cantidad;
     }
-
     public void retirar(float cantidad){
-        saldo=saldo-cantidad;
-        if (saldo>=cantidad) {
+        float nuevoSaldo = saldo-cantidad;
+        if (nuevoSaldo>=0) {
             saldo=saldo-cantidad;
         } else {
             System.out.println("No tiene saldo suficiente");
         }
     }
+    public void calcularInteres(){
+        float tasaMensual = tasaAnual/12;
+        float interesMensual = saldo*tasaMensual;
+        saldo = saldo + interesMensual;
+    }
 
-
-    
+    public void extractoMensual(){
+        saldo = saldo-comisionMensual;
+        calcularInteres();
+    }
 }
