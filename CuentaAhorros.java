@@ -1,8 +1,8 @@
 public class CuentaAhorros extends Cuenta {
     private boolean activa;
 
-    public CuentaAhorros(float saldo, float tasaAnual){
-    super(saldo, tasaAnual);
+    public CuentaAhorros(float saldo, float tasa){
+    super(saldo, tasa);
     if (saldo<10000) {
         activa=false;
         
@@ -33,6 +33,12 @@ public class CuentaAhorros extends Cuenta {
             }
             
         }
+    }
+    public void imprimir(){
+        System.out.println("Saldo = " +saldo);
+        System.out.println("Comisión mensual = $ " +comisionMensual);
+        System.out.println("Número de transacciones = " + (numeroConsignaciones+numeroRetiros));
+        System.out.println();
     }
     
     
