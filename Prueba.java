@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Prueba {
     public static void main(String[] args) {
@@ -24,6 +24,12 @@ public class Prueba {
         System.out.println("Ingrese cantidad a consignar= $");
         float cantidadDeposito3 = input.nextFloat();
         cuenta1.consignar(cantidadDeposito3);
+        System.out.println("Ingrese cantidad a retirar= $");
+        float cantidadRetiro3 = input.nextFloat();
+        cuenta1.retirar(cantidadRetiro3);
+        System.out.println("Ingrese cantidad a consignar= $");
+        float cantidadDeposito4 = input.nextFloat();
+        cuenta1.consignar(cantidadDeposito4);
         System.out.println("Ingrese cantidad a retirar= $");
         float cantidadRetiro4 = input.nextFloat();
         cuenta1.retirar(cantidadRetiro4);
